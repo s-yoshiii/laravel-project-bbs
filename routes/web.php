@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $post = [
-        // 'Title A',
-        // 'Title B',
-        // 'Title C',
+        'Title A',
+        'Title B',
+        'Title C',
     ];
     return view('index')
         ->with(['posts' => $post]);
