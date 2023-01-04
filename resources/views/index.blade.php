@@ -2,10 +2,10 @@
     <x-slot name="title">My BBS</x-slot>
     <h1>My BBS</h1>
         <ul>
-            @forelse ($posts as $index => $post)
+            @forelse ($posts as $post)
                 <li>
-                    <a href="{{ route('posts.show', $index) }}">
-                        {{ $post }}
+                    <a href="{{ route('posts.show', $post->id) }}">
+                        {{ $post->title }}
                     </a>
                 </li>
             @empty
