@@ -16,7 +16,8 @@ class PostController extends Controller
     }
     public function show($id)
     {
+        $post = Post::findOrFail($id);
         return view('posts.show')
-            ->with(['post' => $this -> posts[$id]]);
+            ->with(['post' => $post]);
     }
 }
