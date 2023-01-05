@@ -4,8 +4,9 @@
     <h1>Add New Post</h1>
     <form action="" method="post">
         @csrf
-        <label>Title <input type="text" name="title"></label>
-        <label>Body <textarea name="body"></textarea></label>
+        <div class="form-group"><label>Title <input type="text" name="title"></label></div>
+        <div class="form-group"><label>Body <textarea name="body"></textarea></label></div>
+        <div class="form-button"><button type="submit">Add</button></div>
     </form>
 </x-layout>
 
