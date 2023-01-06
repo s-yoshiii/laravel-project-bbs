@@ -41,4 +41,10 @@ class PostController extends Controller
         return redirect()
             ->route('posts.index');
     }
+    // Implicit Binding
+    public function edit(Post $post)
+    {
+        return view('posts.edit')
+            ->with(['post' => $post]);
+    }
 }
