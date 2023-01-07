@@ -2,7 +2,8 @@
     <x-slot name="title">Edit Post | My BBS</x-slot>
     <div class="back-link">&laquo; <a href="{{ route('posts.show', $post) }}">Back</a></div>
     <h1>Add New Post</h1>
-    <form action="" method="post">
+    <form action="{{ route('post.update', $post ) }}" method="post">
+        @method('PATCH')
         @csrf
         <div class="form-group">
             <label>Title <input type="text" name="title" value="{{ old('title', $post->title) }}"></label>
@@ -16,7 +17,7 @@
             <div class="error">{{ $message }}</div>
             @enderror
         </div>
-        <div class="form-button"><button type="submit">Upddate</button></div>
+        <div class="form-button"><button type="submit">Update</button></div>
     </form>
 </x-layout>
 
