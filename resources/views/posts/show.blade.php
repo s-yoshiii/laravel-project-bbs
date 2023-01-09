@@ -12,7 +12,7 @@
     </h1>
     <p>{!! nl2br(e($post->body)) !!}</p>
     <h2>Comments</h2>
-    <form action="{{ route('comment.store', $post) }}" method="post">
+    <form action="{{ route('comments.store', $post) }}" method="post">
         @csrf
         <div class="comment-form">
             <input type="text" name="body">
